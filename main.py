@@ -40,15 +40,21 @@ amplitude_spectrum = abs(C)
 phase_spectrum = np.angle(C)
 
 # побудова графіку спектру амплітуд
-plt.plot(amplitude_spectrum)
+plt.figure(figsize=(8, 6))
+plt.stem(amplitude_spectrum, use_line_collection=True)
 plt.xlabel('Frequency')
 plt.ylabel('Amplitude')
+plt.title('Amplitude Spectrum')
+plt.grid(True, which='both', linestyle='--', alpha=0.5)
 plt.show()
 
 # побудова графіку спектру фаз
-plt.plot(phase_spectrum)
+plt.figure(figsize=(8, 6))
+plt.stem(phase_spectrum, use_line_collection=True)
 plt.xlabel('Frequency')
 plt.ylabel('Phase')
+plt.title('Phase Spectrum')
+plt.grid(True, which='both', linestyle='--', alpha=0.5)
 plt.show()
 
 # вивід результатів та часу виконання
